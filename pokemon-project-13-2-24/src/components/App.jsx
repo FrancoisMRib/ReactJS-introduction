@@ -9,9 +9,9 @@ export function App({pokemons}){
     console.log(bulbizarre);
     return (
         <div>
-            <div className="pokemon">
+            {/* <div class="pokemon">
                 <Pokemon id={bulbizarre.id} name={bulbizarre.name} image={bulbizarre.image}/>
-            </div>
+            </div> */}
             <div>
                 <PokemonList pokemons={pokemons}/>
             </div>

@@ -27,9 +27,9 @@ export function Pokemon({id, name, image}) {
     // }
     return(
         <div class="unique">
-            <p>{id}</p>
-            <p>{name}</p>
-            <img src={image} alt="" class="sprite"/>
+            <div>{id}</div>
+            <div>{name}</div>
+            <div><img src={image} alt="" class="sprite"/></div>
         </div>
     )
 }

@@ -10,13 +10,19 @@ div.pokemon {
     width: 79%;
 }
 
-div.unique {
+.unique {
     background-color: #2e2e2e;
     color: white;
-    width: 75%;
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+    /* display: grid;
+    grid-template-columns: repeat (3, 1fr);
+    grid-gap: 1rem; */
 }
 
 img.sprite {
-    width: 50px;
-    height: 50px;
+    height: 80px;
 }
