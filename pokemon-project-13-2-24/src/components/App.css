@@ -1,0 +1,22 @@
+body {
+    background-color: #EF3E3E;
+    color: white;
+    font-family: sans-serif;
+}
+
+div.pokemon {
+    background-color: #2e2e2e;
+    color: white;
+    width: 79%;
+}
+
+div.unique {
+    background-color: #2e2e2e;
+    color: white;
+    width: 75%;
+}
+
+img.sprite {
+    width: 50px;
+    height: 50px;
+}
