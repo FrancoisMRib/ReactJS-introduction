@@ -1,11 +1,13 @@
+import './App.css';
+
 export function Tableau() {
 
-    const ordis = [
-        {name : "Lenovao thinkpas T440", price: 2300},
-        {name : "Dell latitude", price: 2300},
-        {name : "Alienware", price: 2300},
-        {name : "Asus très cher", price: 2300}
+    const voitures = [
+        "Citroën 2cv",
+        "Renault Cinq",
+        "Peugeot 104"
     ];
+
 
     //1re version, très JS
     // let ordisElements = [];
@@ -19,17 +21,15 @@ export function Tableau() {
     //     ordisElements.push( <p>{ordi}</p> )
     // })
 
-    //Version finale avec une map qui transforme mes strinfs en <p> </p>
-    const ordisElements = ordis.map(ordi=>{
-        return <p>{ordi}</p>;
+    //Version finale avec une map qui transforme mes strings en <p> </p>
+    const voituresElements = voitures.map((voiture,i)=>{
+        return <p key={i}>{voiture}</p>;
     });
-
-    const ordisBalises = ordis.map((ordi, i) => <p key={i} > {ordi.name} </p>)
 
     return (
         <div>
-            <h1>Tableau</h1>
-            {ordisElements}
+            <h3>Tableau des voitures</h3>
+            {voituresElements}
         </div>
     )
 }
