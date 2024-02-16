@@ -16,6 +16,7 @@ export function App() {
         event.preventDefault(); // J'annule le rechargement de la page
         const newtask = (new FormData(event.target)).get("task");
         setTasks([
+            //Les ... signifient qu'on attrape les données du tableau écrit après
             ...tasks,
             newtask
             ]);
