@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 //import {Products} from './Products.jsx';
 
 export function Array() {
@@ -9,9 +10,16 @@ export function Array() {
         {name : "Asus très cher", image: "https://www.afbshop.fr/media/4e/de/1f/1697708709/Firefly%20PC%20fixe%20vs%20PC%20portable%20plac%C3%A9%20au%20fond%20d%E2%80%99une%20for%C3%AAt%20magnifique%20et%20luxuriante%2C%20atmosph%C3%A8re%20et%20%C3%A9cl.jpg", price: 2900}
     ];
 
+    const maxPriceRange = 3000;
+    const [maxPrice, setMaxPrice] = useState(maxPriceRange) ;
+    //Je filtre les produits
+    const filteredProducts = ordis.filter((ordi)=>{
+        return ordi.price < maxPrice ;
+    });
+
     //NON NON EN FAIT Ici il y avait du code qui est parti dans Products.jsx
     //Je transforme mes strings en balises
-    const ordisBalises = ordis.map((ordi, i) => {
+    const ordisBalises = filteredProducts.map((ordi, i) => {
         return (
             <div key={i}>
                 <img src={ordi.image} alt="" className="ordinatueurs"/>
@@ -22,9 +30,18 @@ export function Array() {
     
     }) ;
 
+    function updateMaxPrice(event){
+        const value = event.target.value;
+        setMaxPrice(value);
+    }
+
     return (
         <div>
             <h3>Tableau des ordinateurs</h3>
+            <label>
+                <p>{maxPrice}</p>
+                <input type="range" max={maxPriceRange} defaultValue={maxPriceRange} onInput={updateMaxPrice} />
+            </label>
             {ordisBalises}
         </div>
     )
