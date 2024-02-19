@@ -26,3 +26,16 @@ div.pokemon {
 img.sprite {
     height: 80px;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.presentation {
+    text-align: center;
+}
+
+.elements {
+    height: 100px;
+}

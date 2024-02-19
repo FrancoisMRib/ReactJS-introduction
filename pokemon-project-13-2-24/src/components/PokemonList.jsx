@@ -1,16 +1,18 @@
 //import { useEffect } from "react";
 import './App.css' ;
+import {Pokemon} from "./Pokemon";
 
-export function PokemonList({pokemons}) {
+export function PokemonList({pokemons, updateCurrentPokemon}) {
     const pokemonsJsx = [];
-    pokemons.forEach(element => {
+    pokemons.forEach((pokemon,i) => {
         pokemonsJsx.push(
             (
-            <div class="unique">
-                    <p>{element.id}</p>
-                    <p>{element.name}</p>
-                    <img src={element.image} alt="" class="sprite"/>
-            </div>
+                <Pokemon pokemon={pokemon} updateCurrentPokemon={updateCurrentPokemon} key={i}/>
+            // <div class="unique">
+            //         <p>{element.id}</p>
+            //         <p>{element.name}</p>
+            //         <img src={element.image} alt="" class="sprite"/>
+            // </div>
             )
         );
     });

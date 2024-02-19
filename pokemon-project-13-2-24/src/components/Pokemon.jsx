@@ -1,4 +1,5 @@
 import './App.css' ;
+//import {PokemonDetail} from "./PokemonDetail";
 
 {/* <Pokemon pokemon={bulbizarre} onClickPokemon={(pokemon)=>{
     console.log(pokemon);
@@ -14,7 +15,7 @@ import './App.css' ;
 //     console.log(films);
 // }
 
-export function Pokemon({id, name, image}) {
+export function Pokemon({pokemon, updateCurrentPokemon}) {
 
     // function afficherPokemon() {
     //     fetch("https://pokebuildapi.fr/api/v1/pokemon/limit/100")
@@ -25,11 +26,16 @@ export function Pokemon({id, name, image}) {
     //     let name = pokemon.name ;
     //     let image = pokemon.image ;
     // }
+
+    function changePoke() {
+        updateCurrentPokemon(pokemon);
+    };
+
     return(
-        <div class="unique">
-            <div>{id}</div>
-            <div>{name}</div>
-            <div><img src={image} alt="" class="sprite"/></div>
+        <div className="unique" onClick={changePoke}>
+            <div>{pokemon.id}</div>
+            <div>{pokemon.name}</div>
+            <div><img src={pokemon.image} alt="" className="sprite"/></div>
         </div>
     )
 }
