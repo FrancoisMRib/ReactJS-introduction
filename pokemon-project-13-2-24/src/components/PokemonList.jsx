@@ -17,7 +17,7 @@ export function PokemonList({pokemons, updateCurrentPokemon}) {
         );
     });
     return (
-        <div>
+        <div className='scroll'>
             {pokemonsJsx}
         </div>
     );   

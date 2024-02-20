@@ -39,3 +39,8 @@ img.sprite {
 .elements {
     height: 100px;
 }
+
+.scroll {
+    overflow-y: scroll;
+    height: 97vh;
+}
